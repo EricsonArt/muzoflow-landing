@@ -1,6 +1,7 @@
 'use client';
 
 import { useRef } from 'react';
+import Image from 'next/image';
 import { motion, useInView } from 'framer-motion';
 import { Music, Tv2, Users } from 'lucide-react';
 
@@ -50,27 +51,14 @@ export default function About() {
 
               {/* Avatar circle */}
               <div className="relative w-56 h-56 sm:w-72 sm:h-72 rounded-full bg-gradient-to-br from-[#27272a] to-[#18181b] border border-[#3f3f46] flex flex-col items-center justify-center overflow-hidden shadow-2xl shadow-[#8b5cf6]/15">
-                {/* Subtle gradient background for avatar */}
-                <div
-                  className="absolute inset-0 opacity-30"
-                  style={{
-                    background:
-                      'radial-gradient(circle at 50% 30%, #8b5cf6 0%, transparent 60%)',
-                  }}
-                  aria-hidden="true"
+                {/* Profile image */}
+                <Image
+                  src="/konrad-profile.jpg"
+                  alt="Konrad Strzałkowski"
+                  fill
+                  className="object-cover"
+                  priority
                 />
-
-                {/* Placeholder silhouette */}
-                <svg
-                  viewBox="0 0 100 100"
-                  className="relative w-32 h-32 sm:w-40 sm:h-40"
-                  aria-label="Zdjęcie Konrada Strzałkowskiego"
-                >
-                  {/* Head */}
-                  <circle cx="50" cy="35" r="18" fill="#3f3f46" />
-                  {/* Body */}
-                  <ellipse cx="50" cy="75" rx="24" ry="20" fill="#3f3f46" />
-                </svg>
               </div>
 
               {/* Floating badge */}
