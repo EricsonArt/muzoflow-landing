@@ -1,7 +1,6 @@
 'use client';
 
 import { useRef } from 'react';
-import Image from 'next/image';
 import { motion, useInView } from 'framer-motion';
 import { Music, Tv2, Users } from 'lucide-react';
 
@@ -50,14 +49,12 @@ export default function About() {
               />
 
               {/* Avatar circle */}
-              <div className="relative w-56 h-56 sm:w-72 sm:h-72 rounded-full bg-gradient-to-br from-[#27272a] to-[#18181b] border border-[#3f3f46] flex flex-col items-center justify-center overflow-hidden shadow-2xl shadow-[#8b5cf6]/15">
+              <div className="relative w-56 h-56 sm:w-72 sm:h-72 rounded-full bg-gradient-to-br from-[#27272a] to-[#18181b] border border-[#3f3f46] overflow-hidden shadow-2xl shadow-[#8b5cf6]/15">
                 {/* Profile image */}
-                <Image
+                <img
                   src="/konrad-profile.jpg"
                   alt="Konrad Strzałkowski"
-                  fill
-                  className="object-cover"
-                  priority
+                  className="w-full h-full object-cover"
                 />
               </div>
 
