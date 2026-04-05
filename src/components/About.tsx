@@ -62,10 +62,13 @@ export default function About() {
               <motion.div
                 animate={{ y: [0, -6, 0] }}
                 transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
-                className="absolute -bottom-3 -right-3 flex items-center gap-2 px-3.5 py-2 rounded-full bg-[#18181b] border border-[#8b5cf6]/30 shadow-lg shadow-black/30"
+                className="absolute -bottom-16 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1.5 px-4 py-3 rounded-xl bg-[#18181b] border border-[#8b5cf6]/30 shadow-lg shadow-black/30 whitespace-nowrap"
               >
-                <span className="w-2 h-2 rounded-full bg-[#22c55e] animate-pulse" />
-                <span className="text-xs font-medium text-[#a1a1aa]">Twórca kursu</span>
+                <span className="text-sm font-bold text-[#fafafa]">Konrad Strzałkowski</span>
+                <span className="text-xs text-[#a1a1aa] flex items-center gap-1.5">
+                  <span className="w-2 h-2 rounded-full bg-[#22c55e] animate-pulse" />
+                  Twórca kursu
+                </span>
               </motion.div>
             </div>
           </motion.div>
